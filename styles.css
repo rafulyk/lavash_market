@@ -1,16 +1,13 @@
 :root {
     --Soft_Apricot: #FFD6AF;
-    --Apricot_Creme: #F3C577;
-    --Soft_Fawn: #DCC48E;
+    --Almond_Slik: #E7CDBD;
     --Dark_Coffee: #2A1300;
-    --Glass: #ffffff30;
 }
 *, *::before, *::after {
     margin: 0;
     box-sizing: border-box;
 }
 body {
-    background-color: var(--Soft_Apricot);
     height: 100vh;
     color: var(--Dark_Coffee);
 }
@@ -18,29 +15,27 @@ body {
 #top-header {
     position: fixed;
     top: 0;
-    padding-top: 5px;
+    padding: 3px 0;
     width: 100%;
     display: flex;
     justify-content: center;
-    border-bottom: 3px solid var(--Glass);
 }
-#logo-lmarket { height: 70px; }
+#logo-lmarket { height: 55px; }
 
 #nav-bar {
     position: fixed;
     bottom: 0;
-    padding-bottom: 5px;
     width: 100%;
     display: flex;
     justify-content: space-around;
-    align-items: flex-end;
-    border-top: 3px solid var(--Glass);
+    align-items: center;
+    padding-top: 3px;
 }
 #nav-bar img {
    display: block; 
 }
-#logo-order { height: 55px; width: 65px;}
-.logo-nav { height: 37px; box-shadow: 0 0 3px var(--Dark_Coffee); border-radius: 10px;}
+#logo-order { height: 48px; width: 59px;}
+.logo-nav { height: 32px; width: 38px; border-radius: 8px;}
 
 #top-header, #nav-bar {
     background-color: var(--Soft_Apricot);
@@ -50,14 +45,12 @@ body {
 
 main {
     height: 100%;
-    padding: 80px 0 65px;
+    padding: 80px 0 55px;
+    background-color: #E7CDBD;
 }
 #content { 
-    height: 450px;
     width: 90%;
     margin: 10px auto;
-    background-color: var(--Glass);
-    border-radius: 10px;
     text-align: center;
 }
 

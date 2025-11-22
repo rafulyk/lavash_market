@@ -1,0 +1,66 @@
+:root {
+    --Soft_Apricot: #FFD6AF;
+    --Apricot_Creme: #F3C577;
+    --Soft_Fawn: #DCC48E;
+    --Dark_Coffee: #2A1300;
+    --Glass: #ffffff30;
+}
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--Soft_Apricot);
+    height: 100vh;
+    color: var(--Dark_Coffee);
+}
+
+#top-header {
+    position: fixed;
+    top: 0;
+    padding-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid var(--Glass);
+}
+#logo-lmarket { height: 70px; }
+
+#nav-bar {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-top: 3px solid var(--Glass);
+}
+#nav-bar img {
+   display: block; 
+}
+#logo-order { height: 55px; width: 65px;}
+.logo-nav { height: 37px; box-shadow: 0 0 3px var(--Dark_Coffee); border-radius: 10px;}
+
+#top-header, #nav-bar {
+    background-color: var(--Soft_Apricot);
+    z-index: 1000;
+    box-shadow: 0 0 10px;
+}
+
+main {
+    height: 100%;
+    padding: 80px 0 65px;
+}
+#content { 
+    height: 450px;
+    width: 90%;
+    margin: 10px auto;
+    background-color: var(--Glass);
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 3rem;
+}

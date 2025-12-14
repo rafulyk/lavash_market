@@ -24,18 +24,24 @@ body {
 
 #nav-bar {
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 270px;
+    height: 50px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 3px;
+    border-radius: 25px;
+    opacity: 0.8;
 }
-#nav-bar img {
-   display: block; 
+.nav-icon {
+    height: 35px;
 }
-#logo-order { height: 48px; width: 59px;}
-.logo-nav { height: 32px; width: 38px; border-radius: 8px;}
+
+.select {
+
+}
 
 #top-header, #nav-bar {
     background-color: var(--Soft_Apricot);

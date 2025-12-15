@@ -2,6 +2,7 @@
     --Soft_Apricot: #FFD6AF;
     --Almond_Slik: #E7CDBD;
     --Dark_Coffee: #2A1300;
+    --Royal-Plum: #823174;
 }
 *, *::before, *::after {
     margin: 0;
@@ -10,8 +11,14 @@
 body {
     height: 100vh;
     color: var(--Dark_Coffee);
+    font-family: 'Averia Serif Libre', serif;
 }
 
+
+#top-header, #nav-bar, #selected {
+    z-index: 1000;
+    box-shadow: 0 0 7px var(--Dark_Coffee);
+}
 #top-header {
     position: fixed;
     top: 0;
@@ -19,35 +26,47 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: var(--Soft_Apricot);
 }
 #logo-lmarket { height: 55px; }
 
-#nav-bar {
+
+#nav-bar, #selected {
     position: fixed;
-    bottom: 3%;
+    bottom: 35px;
     left: 50%;
     transform: translateX(-50%);
-    width: 270px;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     border-radius: 25px;
-    opacity: 0.8;
+    
 }
-.nav-icon {
-    height: 35px;
-}
-
-.select {
-
-}
-
-#top-header, #nav-bar {
+#nav-bar {
     background-color: var(--Soft_Apricot);
-    z-index: 1000;
-    box-shadow: 0 0 10px;
+    width: 300px;
+    display: flex;
+    opacity: 0.75;
 }
+#selected, .icon-box {
+    width: 100px;
+    height: 55px; 
+}
+#selected {
+    background-color: var(--Royal-Plum);
+    opacity: 0.25;
+    transition: 0.3s;
+}
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.icon-text {
+    color: var(--Royal-Plum);
+    font-size: 12px;
+    font-family: 'Pattaya', sans-serif;
+}
+.nav-icon { width: 30px; }
+
 
 main {
     height: 100%;
@@ -59,7 +78,6 @@ main {
     margin: 10px auto;
     text-align: center;
 }
-
 h1 {
     margin-top: 3rem;
 }

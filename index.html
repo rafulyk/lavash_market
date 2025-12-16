@@ -2,30 +2,52 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Лаваш market">
+    <meta name="theme-color" content="#FFD6AF">
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="styles.css">
     <title>Лаваш market</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Pattaya&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <div id="top-header">
-        <img id="logo-lmarket" src="logos/Lmarket4.png" alt="Логотип компании">      
+        <img id="logo" src="logos/Lmarket4.png" alt="Логотип компании">
+        <div id="contacts-window">
+            <div id="contacts">
+                <div class="icon-space"></div>
+                <a href="https://wa.me/79174526677" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/whatsapp.png" alt="Иконка whatsapp"></a>
+                <a href="https://t.me/lavashufa" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/telegram.png" alt="Иконка telegram"></a>
+                <a href="https://max.ru/u/f9LHodD0cOIWfjZ_yr5Y0I-tprCtTucdRrg2XVYG-CJVSXYg0LpNhqk2q80" target="_blank" rel="noopener noreferrer"><img class="contact-icon" src="logos/max.png" alt="Иконка max"></a>
+                <div class="icon-space"></div>
+            </div>
+        </div>
     </div>
     <div id="nav-bar">
-        <div class="icon-box"><img class="nav-icon" src="logos/info.png" alt="Логотип информации"><p class="icon-text">Контакты</p></div>
-        <div class="icon-box"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа"><p class="icon-text">Заказать</p></div>
-        <div class="icon-box"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета"><p class="icon-text">Кабинет</p></div>
+        <div id="info-btn" class="nav-btn"><img class="nav-icon" src="logos/info.png" alt="Логотип информации"><p class="nav-text">Контакты</p></div>
+        <div id="order-btn" class="nav-btn"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа"><p class="nav-text">Заказать</p></div>
+        <div id="account-btn" class="nav-btn"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета"><p class="nav-text">Кабинет</p></div>
     </div>
     <div id="selected"></div>
 </header>
 <main>
-    <div id="content">
-        <h1>TEST</h1>
-        <p>for example</p>
+    <div id="info-page" class="page" hidden>
+        <h1>Info</h1>
+        <p>Здесь будет информация о нас</p>
+    </div>
+        <div id="order-page" class="page">
+        <h1>Order</h1>
+        <p>Здесь будет форма для заказа</p>
+    </div>
+        <div id="account-page"  class="page" hidden>
+        <h1>Account</h1>
+        <p>Ну а тут когда-нибудь будет личный кабинет</p>
     </div>
 </main>
+<script src="script.js"></script>
 </body>
 </html>

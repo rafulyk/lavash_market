@@ -4,10 +4,11 @@ html {
     -webkit-overflow-scrolling: touch;
 }
 :root {
-    --Soft_Apricot: #FFD6AF;
-    --Almond_Slik: #E7CDBD;
-    --Dark_Coffee: #2A1300;
-    --Royal-Plum: #823174;
+    --Apricot: #FFD6AF;
+    --Slik: #E7CDBD;
+    --Coffee: #2A1300;
+    --Plum: #823174;
+    --Blush: #d7aa9e4d;
 }
 *, *::before, *::after {
     margin: 0;
@@ -16,8 +17,8 @@ html {
 }
 body {
     height: 100%;
-    background-color: #E7CDBD;
-    color: var(--Dark_Coffee);
+    background-color: var(--Slik);
+    color: var(--Coffee);
     font-family: 'Averia Serif Libre', serif;
 }
 a {
@@ -30,7 +31,7 @@ a {
                 /* Фиксировання шапка с логотипом и меняющимися иконками мессенджеров */
 #top-header, #nav-bar, #selected {
     z-index: 1000;
-    box-shadow: 0 0 7px var(--Dark_Coffee);
+    box-shadow: 0 0 7px var(--Coffee);
 }
 #top-header {
     height: 50px; 
@@ -39,7 +40,7 @@ a {
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: var(--Soft_Apricot);
+    background-color: var(--Apricot);
 }
 #logo { width: 166px; height: 50px; }
 #contacts-window {
@@ -56,7 +57,7 @@ a {
     flex-direction: column;
     animation: contacts-change 8s linear infinite;
 }
-.contact-icon { width: 36px; height: 36px; margin: 7px 0; opacity: 0.8; display: block; }
+.contact-icon { width: 36px; height: 36px; margin: 7px 0; opacity: 0.7; display: block; }
 .icon-space { width: 36px; height: 25px;}
 @keyframes contacts-change {
         0% { transform: translateY(0); }
@@ -82,17 +83,17 @@ a {
     
 }
 #nav-bar {
-    background-color: var(--Soft_Apricot);
+    background-color: var(--Apricot);
     width: 300px;
     display: flex;
-    opacity: 0.75;
+    opacity: 0.9;
 }
 #selected, .nav-btn {
     width: 100px;
     height: 55px; 
 }
 #selected {
-    background-color: var(--Royal-Plum);
+    background-color: var(--Plum);
     opacity: 0.25;
     transition: 0.3s;
 }
@@ -103,7 +104,7 @@ a {
     justify-content: center;
 }
 .nav-text {
-    color: var(--Royal-Plum);
+    color: var(--Plum);
     font-size: 12px;
     font-family: 'Pattaya', sans-serif;
 }
@@ -113,12 +114,30 @@ a {
 
 
                 /* Три основных контейнера, в которых будет весь контент */
-.page {
-    height: 100vh;
-    padding: 80px 0 55px;
-    
+.page { height: 100% ; padding: 60px 10px 100px; }
+
+
+
+
+                /* Первый контейнер с информацией о компании */
+#contacts-cntnr {
+    display: flex;
+    justify-content: space-evenly;
+}
+#info-page {
+    text-align: center;
+    font-weight: 700;
+}
+#about-us p {
+    background-color: var(--Blush);
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 0 0 5px var(--Apricot);
+}
+#info-page h2 {
+    margin-top: 20px;
 }
 
-h1 {
-    margin-top: 3rem;
-}
+
+
+                /* Второй контейнер для заказа лаваша */

@@ -1,14 +1,13 @@
                 /* Глобальные настройки */
-html {
-    touch-action: manipulation;
-    -webkit-overflow-scrolling: touch;
-}
+html { touch-action: manipulation; -webkit-overflow-scrolling: touch; }
 :root {
     --Apricot: #FFD6AF;
     --Slik: #E7CDBD;
     --Coffee: #2A1300;
     --Plum: #823174;
-    --Blush: #d7aa9e4d;
+    --Apricot-Glass: #FFD6AFCC;
+    --Plum-Glass: #8231744D;
+    --Blush-Glass: #D7AA9E4D;
 }
 *, *::before, *::after {
     margin: 0;
@@ -19,11 +18,17 @@ body {
     height: 100%;
     background-color: var(--Slik);
     color: var(--Coffee);
-    font-family: 'Averia Serif Libre', serif;
+    font-family: "Playpen Sans", cursive;
+    font-weight: 700;
 }
-a {
-    display: block;
+button {
+    background: transparent;
+    border: none;
+    -webkit-touch-callout: none;
+    font-family: "Playpen Sans", cursive;
 }
+a { display: block; }
+a:active, button:active { transform: scale(0.9); }
 
 
 
@@ -55,9 +60,10 @@ a {
     height: 200px;
     display: flex;
     flex-direction: column;
+    opacity: 0.7;
     animation: contacts-change 8s linear infinite;
 }
-.contact-icon { width: 36px; height: 36px; margin: 7px 0; opacity: 0.7; display: block; }
+.contact-icon { width: 36px; height: 36px; margin: 7px 0; display: block; }
 .icon-space { width: 36px; height: 25px;}
 @keyframes contacts-change {
         0% { transform: translateY(0); }
@@ -83,18 +89,15 @@ a {
     
 }
 #nav-bar {
-    background-color: var(--Apricot);
+    background-color: var(--Apricot-Glass);
     width: 300px;
     display: flex;
-    opacity: 0.9;
+    backdrop-filter: blur(2px);
+ 
 }
-#selected, .nav-btn {
-    width: 100px;
-    height: 55px; 
-}
+#selected, .nav-btn { width: 100px; height: 55px; }
 #selected {
-    background-color: var(--Plum);
-    opacity: 0.25;
+    background-color: var(--Plum-Glass);
     transition: 0.3s;
 }
 .nav-btn {
@@ -103,11 +106,7 @@ a {
     align-items: center;
     justify-content: center;
 }
-.nav-text {
-    color: var(--Plum);
-    font-size: 12px;
-    font-family: 'Pattaya', sans-serif;
-}
+.nav-text { color: var(--Plum); font-weight: 800; }
 .nav-icon { width: 30px; }
 
 
@@ -115,7 +114,6 @@ a {
 
                 /* Три основных контейнера, в которых будет весь контент */
 .page { height: 100% ; padding: 60px 10px 100px; }
-
 
 
 
@@ -129,7 +127,7 @@ a {
     font-weight: 700;
 }
 #about-us p {
-    background-color: var(--Blush);
+    background-color: var(--Blush-Glass);
     border-radius: 15px;
     padding: 5px;
     box-shadow: 0 0 5px var(--Apricot);

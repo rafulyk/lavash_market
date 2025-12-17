@@ -10,7 +10,7 @@
     <title>Лаваш market</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Pattaya&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -27,22 +27,22 @@
             </div>
         </div>
     </div>
-    <div id="nav-bar">
-        <div id="info-btn" class="nav-btn"><img class="nav-icon" src="logos/info.png" alt="Логотип информации"><p class="nav-text">Инфо</p></div>
-        <div id="order-btn" class="nav-btn"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа"><p class="nav-text">Заказать</p></div>
-        <div id="account-btn" class="nav-btn"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета"><p class="nav-text">Кабинет</p></div>
+    <div id="nav-bar" role="tablist" aria-label="Навигация по страницам">
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="info-page"><img class="nav-icon" src="logos/info.png" alt="Логотип информации"><p class="nav-text">Инфо</p></button>
+        <button class="nav-btn" role="tab" aria-selected="true" aria-controls="order-page"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа"><p class="nav-text">Заказать</p></button>
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="account-page"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета"><p class="nav-text">Кабинет</p></button>
     </div>
     <div id="selected"></div>
 </header>
 <main>
-    <div id="info-page" class="page" hidden>
+    <div class="page" id="info-page" role="tabpanel" hidden>
         <h2>Напишите нам!</h2>
         <div id="contacts-cntnr">
             <a href="https://wa.me/79174526677" target="_blank" rel="noopener noreferrer"><img src="logos/whatsapp.png" alt="Иконка whatsapp"></a>
             <a href="https://t.me/lavashufa" target="_blank" rel="noopener noreferrer"><img src="logos/telegram.png" alt="Иконка telegram"></a>
             <a href="https://max.ru/u/f9LHodD0cOIWfjZ_yr5Y0I-tprCtTucdRrg2XVYG-CJVSXYg0LpNhqk2q80" target="_blank" rel="noopener noreferrer"><img src="logos/max.png" alt="Иконка max"></a>
         </div>
-        <section id="about-us">
+        <section>
             <h2>О нас</h2>
             <p>С 2012 года создаем идеальный лаваш для шаурмы. 
             Работаем в Уфе и Москве, поддерживая высочайшее качество в каждом городе.</p>
@@ -53,11 +53,11 @@
             <p>Наш лаваш — не просто хлеб, это основа для вашего любимого блюда.</p>
         </section>
     </div>
-        <div id="order-page" class="page">
+        <div class="page" id="order-page" role="tabpanel">
         <h1>Order</h1>
         <p>Здесь будет форма для заказа</p>
     </div>
-        <div id="account-page"  class="page" hidden>
+        <div class="page" id="account-page" role="tabpanel" hidden>
         <h1>Account</h1>
         <p>Ну а тут когда-нибудь будет личный кабинет</p>
     </div>

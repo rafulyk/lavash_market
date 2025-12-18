@@ -28,11 +28,12 @@
         </div>
     </div>
     <div id="nav-bar" role="tablist" aria-label="Навигация по страницам">
-        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="info-page"><img class="nav-icon" src="logos/info.png" alt="Логотип информации"><p class="nav-text">Инфо</p></button>
-        <button class="nav-btn" role="tab" aria-selected="true" aria-controls="order-page"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа"><p class="nav-text">Заказать</p></button>
-        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="account-page"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета"><p class="nav-text">Кабинет</p></button>
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="info-page"><img class="nav-icon" src="logos/info.png" alt="Логотип информации">Инфо</button>
+        <button class="nav-btn" role="tab" aria-selected="true" aria-controls="order-page"><img class="nav-icon" src="logos/order.png" alt="Логотип для создания заказа">Заказать</button>
+        <button class="nav-btn" role="tab" aria-selected="false" aria-controls="account-page"><img class="nav-icon" src="logos/account.png" alt="Логотип личного кабинета">Кабинет</button>
     </div>
     <div id="selected"></div>
+    <p id="total-quantity"></p>
 </header>
 <main>
     <div class="page" id="info-page" role="tabpanel" hidden>
@@ -53,13 +54,152 @@
             <p>Наш лаваш — не просто хлеб, это основа для вашего любимого блюда.</p>
         </section>
     </div>
-        <div class="page" id="order-page" role="tabpanel">
-        <h1>Order</h1>
-        <p>Здесь будет форма для заказа</p>
+    <div class="page" id="order-page" role="tabpanel">
+
+        <article class="product-box">
+            <h2 class="product-name">Лаваш ОБЫЧНЫЙ</h2>
+            <p class="product-info">для шаурмы 45см</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/shawarma.png" alt="Шаурма обычная">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Лаваш СЫРНЫЙ</h2>
+            <p class="product-info">для шаурмы 45см</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/shaworange.png" alt="Шаурма сырная">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Лаваш ТОМАТНЫЙ</h2>
+            <p class="product-info">для шаурмы 45см</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/shawred.png" alt="Шаурма томатная">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Лаваш с ЗЕЛЕНЬЮ</h2>
+            <p class="product-info">для шаурмы 45см</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/shawgreen.png" alt="Шаурма зеленая">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Лаваш ЧЕРНЫЙ</h2>
+            <p class="product-info">для шаурмы 45см</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/shawblack.png" alt="Шаурма черная">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Греческая ПИТА</h2>
+            <p class="product-info">для гироса</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/pita.png" alt="Шаурма">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
+        <article class="product-box">
+            <h2 class="product-name">Батон БУЛКА</h2>
+            <p class="product-info">для хот-дога</p>
+            <div class="product-img-box">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">-50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">-500</span>шт</button>
+                </div>
+                <img class="product-img" src="logos/hotdog.png" alt="Шаурма">
+                <div class="quantity-buttons">
+                    <button class="q-btn"><span class="btn-value">+50</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+200</span>шт</button>
+                    <button class="q-btn"><span class="btn-value">+500</span>шт</button>
+                </div>
+            </div>
+            <p class="product-quantity"><span class="quantity-value">0</span> штук</p>
+        </article>
+
     </div>
-        <div class="page" id="account-page" role="tabpanel" hidden>
+    <div class="page" id="account-page" role="tabpanel" hidden>
         <h1>Account</h1>
-        <p>Ну а тут когда-нибудь будет личный кабинет</p>
+        <p>***Пробный подсчёт***</p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
+        <p class="order-item"></p>
     </div>
 </main>
 <script src="script.js"></script>

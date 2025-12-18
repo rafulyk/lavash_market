@@ -1,5 +1,9 @@
                 /* Глобальные настройки */
-html { touch-action: manipulation; -webkit-overflow-scrolling: touch; }
+html {
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
 :root {
     --Apricot: #FFD6AF;
     --Slik: #E7CDBD;
@@ -7,7 +11,7 @@ html { touch-action: manipulation; -webkit-overflow-scrolling: touch; }
     --Plum: #823174;
     --Apricot-Glass: #FFD6AFCC;
     --Plum-Glass: #8231744D;
-    --Blush-Glass: #D7AA9E4D;
+    --Blush-Glass: #D7AA9E65;
 }
 *, *::before, *::after {
     margin: 0;
@@ -26,6 +30,8 @@ button {
     border: none;
     -webkit-touch-callout: none;
     font-family: "Playpen Sans", cursive;
+    color: var(--Plum);
+    font-weight: 800;
 }
 a { display: block; }
 a:active, button:active { transform: scale(0.9); }
@@ -36,7 +42,7 @@ a:active, button:active { transform: scale(0.9); }
                 /* Фиксировання шапка с логотипом и меняющимися иконками мессенджеров */
 #top-header, #nav-bar, #selected {
     z-index: 1000;
-    box-shadow: 0 0 7px var(--Coffee);
+    box-shadow: 0 0 10px var(--Coffee);
 }
 #top-header {
     height: 50px; 
@@ -46,8 +52,9 @@ a:active, button:active { transform: scale(0.9); }
     display: flex;
     justify-content: center;
     background-color: var(--Apricot);
+    border-bottom: 2px solid var(--Plum-Glass);
 }
-#logo { width: 166px; height: 50px; }
+#logo { width: 160px; height: 48px; }
 #contacts-window {
     position: fixed;
     top: 0;
@@ -86,7 +93,6 @@ a:active, button:active { transform: scale(0.9); }
     left: 50%;
     transform: translateX(-50%);
     border-radius: 25px;
-    
 }
 #nav-bar {
     background-color: var(--Apricot-Glass);
@@ -106,14 +112,27 @@ a:active, button:active { transform: scale(0.9); }
     align-items: center;
     justify-content: center;
 }
-.nav-text { color: var(--Plum); font-weight: 800; }
 .nav-icon { width: 30px; }
+#total-quantity {
+    position: fixed;
+    left: 55%;
+    bottom: 85px;
+    color: var(--Plum);
+    text-shadow: 0 0 2px var(--Coffee);
+}
 
 
 
 
                 /* Три основных контейнера, в которых будет весь контент */
-.page { height: 100% ; padding: 60px 10px 100px; }
+.page {
+    height: 100%;
+    padding: 60px 10px 100px;
+    max-width: 50rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
 
 
 
@@ -121,10 +140,6 @@ a:active, button:active { transform: scale(0.9); }
 #contacts-cntnr {
     display: flex;
     justify-content: space-evenly;
-}
-#info-page {
-    text-align: center;
-    font-weight: 700;
 }
 #about-us p {
     background-color: var(--Blush-Glass);
@@ -139,3 +154,60 @@ a:active, button:active { transform: scale(0.9); }
 
 
                 /* Второй контейнер для заказа лаваша */
+.product-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 18rem;
+    background-color: var(--Blush-Glass);
+    border-radius: 3rem;
+    box-shadow: 0 0 10px var(--Coffee);
+    margin: 3rem 0;
+    border: solid 2px var(--Plum-Glass);
+}
+.product-img-box {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 50%;
+}
+.quantity-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.quantity-buttons button { 
+    background-color: var(--Apricot);
+    box-shadow: -2px -1px 7px var(--Coffee);
+    border: solid 1px var(--Plum-Glass);
+    padding: 0.2rem 0.4rem;
+    font-size: 0.6rem;
+    border-radius: 10px;
+}
+.product-img {
+    display: block;
+    height: 100%;
+  
+}
+.product-quantity {
+    width: 80%;
+    background-color: var(--Slik);
+    border-radius: 2rem;
+    font-size: 0.8rem;
+}
+.quantity-value {
+    font-size: 1.7rem;
+}
+.btn-value {
+    font-size: 1rem;
+}
+#total-quantity {
+    position: fixed;
+    left: 55%;
+    bottom: 85px;
+    color: var(--Plum);
+    text-shadow: 0 0 2px var(--Coffee);
+}
